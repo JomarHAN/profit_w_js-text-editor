@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c939d0e917.js" crossorigin="anonymous"></script>
+    <title>Text Editor</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="text-center container">
+    <main>
+        <h1 class="banner p-3 text-primary">TextEditor</h1>
+        <div class="row">
+          <div class="col">
+            <button id="bold" type="button" onclick="makeBold(this)" class="btn btn-light">Bolb</button>
+            <button id="italic" type="button" onclick="makeItalic(this)" class="btn btn-light">Italic</button>
+            <button id="underline" type="button" onclick="makeUnderline(this)" class="btn btn-light">Underline</button>
+            <button id="left-align" type="button" onclick="alignText(this, 'left')" class="align btn btn-light"><i class="fas fa-align-left"></i></button>
+            <button id="center-align" type="button" onclick="alignText(this, 'center')" class="align btn btn-light"><i class="fas fa-align-center"></i></button>
+            <button id="right-align" type="button" onclick="alignText(this, 'right')" class="align btn btn-light"><i class="fas fa-align-right"></i></button>
+            <button id="justify-align" type="button" onclick="alignText(this, 'justify')" class="align btn btn-light"><i class="fas fa-align-justify"></i></button>
+          </div>
+        </div>
+        <hr />
+        <div class="row editor">
+          <div class="col">
+            <div class="form-group">
+              <label for="text-input">Your Document Text</label>
+              <textarea class="form-control" id="text-input" onkeyup="updateText()" rows="3"></textarea>
+          </div>
+          </div>
+          <div class="col">
+            <label for="text-input">Formatted Text</label>
+            <textarea class="form-control" id="text-output" class="bg-light" disabled rows="3"></textarea>
+          </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
