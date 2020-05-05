@@ -1,7 +1,10 @@
+
+toggleActive = (elem) => $(elem).toggleClass('active');
+
 /**
  * Update the output text as you type in the textarea
  */
-function updateText(){
+updateText = () => {
     let text = $("#text-input").val();
     $('#text-output').text(text);
   }
@@ -9,24 +12,24 @@ function updateText(){
   /**
    * Toggle the bold class for the output text
    */
-  function makeBold(elem){
-    $(elem).toggleClass('active');
+  makeBold = (elem) => {
+    toggleActive(elem);
     $('#text-output').toggleClass('bold');
   }
   
   /**
    * Toggle the italic class for the output text
    */
-  function makeItalic(elem){
-    $(elem).toggleClass('active');
+  makeItalic = (elem) => {
+    toggleActive(elem);
     $('#text-output').toggleClass('italic');
   }
   
   /**
    * Toggle the underline class for the output text
    */
-  function makeUnderline(elem){
-      $(elem).toggleClass('active');
+  makeUnderline = (elem) => {
+    toggleActive(elem);
       $('#text-output').toggleClass('underline');
   }
   
@@ -34,15 +37,15 @@ function updateText(){
    * Toggle the style textAlign attribute
    * Toggle the active state for the align butttons
    */
-  function alignText(elem, alignType){
+  alignText = (elem, alignType) => {
     $('#text-output').css('textAlign',alignType);
 
     deActivateAllAlignButtons();
     
-    $(elem).toggleClass('active');
+    toggleActive(elem);
   }
 
-  function deActivateAllAlignButtons() {
+  deActivateAllAlignButtons = () => {
       let alignButtons = $('.align');
 
       alignButtons.toArray().forEach((btn) => {
